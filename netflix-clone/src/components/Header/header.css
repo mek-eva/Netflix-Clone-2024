@@ -4,9 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: rgb(148, 132, 132); */
     background-color: rgb(20,20,20);
-    /* background-color: transparent; */
     height: 10vh;
     color: white;
     transition: all 0.5s;
@@ -22,17 +20,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: yellow; */
+    
 }
 .header_left ul{
     width: 140%;
     display: flex;
    list-style-type: none;
+    align-items: center;
      justify-content: space-between;
 }
 .header_right ul{
-   display: flex;
-   list-style-type: none;
-   justify-content: space-between;  
-   gap: 10px;
+   width: 150%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    cursor: pointer;
 }
