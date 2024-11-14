@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(20,20,20);
+    /* background-color: rgb(20,20,20); */
     height: 10vh;
     color: white;
     transition: all 0.5s;
@@ -20,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+      /* background-color: red; */
     
 }
 .header_left ul{
@@ -28,6 +29,7 @@
    list-style-type: none;
     align-items: center;
      justify-content: space-between;
+       /* background-color: red; */
 }
 .header_right ul{
    width: 150%;
@@ -35,4 +37,18 @@
     justify-content: space-around;
     list-style: none;
     cursor: pointer;
+      /* background-color: red; */
+}
+/* Max-width for smartphones */
+@media (max-width:720px){
+    .header_left ul li:not(:first-child){
+        display:none;   
+    }
+}
+/* Max-width for tablet */
+@media (max-width:960px){
+    .header_left ul li:not(:first-child){
+        display:none;   
+    }
+
 }

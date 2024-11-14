@@ -6,6 +6,7 @@ import YouTube from 'react-youtube';
 
 const SingleRow= ({ title, fetchUrl, isLargeRow})=>{
     const [movies, setMovie]= useState([]);
+
     const [trailerUrl, setTrailerUrl] = useState("");
 
     const base_url = "https://image.tmdb.org/t/p/original";
@@ -14,6 +15,7 @@ const SingleRow= ({ title, fetchUrl, isLargeRow})=>{
         (async ()=>{
             try{
                 // console.log(fetchUrl)
+                // axios is the one we created in utils 
                 const request = await axios.get(fetchUrl);
                 // console.log(request)
                 setMovie(request.data.results);
@@ -34,11 +36,13 @@ const SingleRow= ({ title, fetchUrl, isLargeRow})=>{
                 // console.log(url)
                 const urlParams= new URLSearchParams(new URL(url).search)
                 // console.log(urlParams)
+                // v ...for vedio ID
                 // console.log(urlParams.get('v'))
                 setTrailerUrl(urlParams.get('v'));
             })
         }
         }
+        //opts..stand for option
         const opts = {
             height: '390',
             width: "100%",
@@ -55,15 +59,13 @@ const SingleRow= ({ title, fetchUrl, isLargeRow})=>{
           <img
             onClick={() => handleClick(movie)}
             key={index}
-            src={`${base_url}${
-              isLargeRow ? movie.poster_path : movie.backdrop_path
-            }`}
+            src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path }`}
             alt={movie.name}
             className={`row_poster $ {isLargeRow && "row_posterLarge"}`}
           />
         ))}
       </div>
-      <div style={{ padding: "40px" }}>
+      <div style={{ padding: "20px" }}>
         {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
       </div>
     </div>

@@ -8,8 +8,9 @@ const RowList = () => {
       <SingleRow
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
-        isLargeRow={true}/>
-        
+        isLargeRow={true}
+      />
+
       <SingleRow title="Trending Now" fetchUrl={requests.fetchTrending} />
 
       <SingleRow title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} />
@@ -25,9 +26,9 @@ const RowList = () => {
         fetchUrl={requests.fetchRomanceMovies}
       />
 
-      <SingleRow title="TV Shows" fetchUrl={requests.fetchTvShow} />
-
       <SingleRow title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+
+      <SingleRow title="TV Shows" fetchUrl={requests.fetchTvShow} />
     </>
   );
 }
