@@ -46,3 +46,15 @@
     font-size: 12px;
     margin-bottom: 10px;
 }
+
+@media screen and (max-width: 768px){
+   .footer_icons,.footer_data {
+        flex-direction: column;
+
+    }
+}
+@media screen and (max-width:768px){
+    .service_code{
+        display: none;
+    }
+}
